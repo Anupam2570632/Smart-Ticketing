@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Smart Ticketing</title>
+    <link rel="shortcut icon" href="./images/bus-icon.png" type="image/x-icon">
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,20 +27,20 @@
 
 <body>
 
-    <header class="w-4/5 mx-auto my-14">
+    <header class="lg:w-4/5 w-11/12 mx-auto lg:my-10 my-4">
 
         <!-- nav section -->
         <nav class="flex justify-between items-center">
-            <h1 class="text-4xl font-bold font-raleway">
+            <h1 class="lg:text-4xl text-2xl font-bold font-raleway">
                 P-Ticket
             </h1>
-            <ul class="flex justify-between text-[18px] font-medium gap-14">
+            <ul class="hidden lg:flex justify-between text-[18px] font-medium gap-14">
                 <li class="hover:cursor-pointer">Home</li>
                 <li class="hover:cursor-pointer">About</li>
                 <li class="hover:cursor-pointer">Destination</li>
                 <li class="hover:cursor-pointer">Search</li>
             </ul>
-            <button class="flex items-center border border-[#1DD10066] gap-3 px-8 py-4 rounded-xl bg-[#1DD10019]">
+            <button class="flex items-center border border-[#1DD10066] gap-3 px-7 py-3 rounded-xl bg-[#1DD10019]">
                 <p class="text-[#1DD100] text-[20px] font-inter">
                     Bus
                 </p>
@@ -52,26 +53,126 @@
 
     <main>
         <!-- banner section -->
-        <section class="w-4/5 flex item-center justify-center rounded-[32px] mx-auto h-[550px]" style="background: linear-gradient(180deg, rgba(3, 7, 18, 0.50) 0%, rgba(3, 7, 18, 0.00) 100%), url('./images/banner.png'), lightgray 50% / cover no-repeat;
-        background-size: 100%;
+        <section
+            class="lg:w-4/5 w-11/12 flex item-center justify-center rounded-lg lg:rounded-[32px] mx-auto lg:h-[550px] h-[200px]"
+            style="background: linear-gradient(180deg, rgba(3, 7, 18, 0.50) 0%, rgba(3, 7, 18, 0.00) 100%), url('./images/banner.png'), lightgray 50% / cover no-repeat;
+        background-size: 100% 100%;
         background-position: center;
         background-repeat: no-repeat">
 
-            <div class="flex flex-col items-center justify-center space-y-4">
-                <h1 class="text-6xl font-extrabold font-raleway text-white">
-                    End-to-End Travel with <span class="text-[#1DD100] block text-center pt-4">P Paribahan</span>
+            <div class="flex flex-col items-center justify-center lg:space-y-4 space-y-1">
+                <h1 class="lg:text-6xl text-xl font-extrabold font-raleway text-white">
+                    End-to-End Travel with <span class="text-[#1DD100] block text-center lg:pt-4">P Paribahan</span>
                 </h1>
 
-                <p class="max-w-[650px] text-[18px] text-white text-center font-inter">
+                <p class="max-w-[650px] lg:text-[18px] text-white text-center font-inter">
                     Yes, you can run unit tests and view the results directly within the app. The integrated testing
                     features allow for a streamlined .
                 </p>
 
-                <button id="ticket-button" class="bg-[#1DD100] px-8 py-5 rounded-xl text-black font-bold">
+                <button id="ticket-button"
+                    class="bg-[#1DD100] lg:px-7 lg:py-4 rounded-md lg:rounded-xl text-black font-bold text-[12px] lg:text-[16px] py-3 px-3">
                     Buy Tickets
                 </button>
             </div>
 
+        </section>
+        <section
+            class="lg:w-[70%] font-inter w-11/12 mx-auto flex justify-between flex-col lg:flex-row gap-6 lg:mt-[-50px] mb-10 lg:mb-20">
+            <div class="flex p-10 gap-4 rounded-2xl bg-white border-b-4 border-b-[#1DD100] flex-1">
+                <img src="./images/people.png" alt="">
+                <div class="space-y-2">
+                    <h1 class="text-black font-bold text-4xl">
+                        500K+
+                    </h1>
+                    <p class="text-[18px] text-[#03071299] font-inter">
+                        Registered users
+                    </p>
+                </div>
+            </div>
+            <div class="flex p-10 gap-4 rounded-2xl bg-white flex-1 border-b-4 border-b-[#1DD100]">
+                <img src="./images/ticket-cupon.png" alt="">
+                <div class="space-y-2">
+                    <h1 class="text-black font-bold text-4xl">
+                        1.7 lacks
+                    </h1>
+                    <p class="text-[18px] text-[#03071299] font-inter">
+                        Tickets sold
+                    </p>
+                </div>
+            </div>
+            <div class="flex p-10 gap-4 rounded-2xl bg-white border-b-4 border-b-[#1DD100] flex-1">
+                <img src="./images/stoppage.png" alt="">
+                <div class="space-y-2">
+                    <h1 class="text-black font-bold text-4xl">
+                        80K+
+                    </h1>
+                    <p class="text-[18px] text-[#03071299] font-inter">
+                        Rental partners
+                    </p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- offer section -->
+        <section class="w-11/12 lg:w-4/5 mx-auto my-14 text-center space-y-12 font-inter">
+            <h1 class="font-bold text-4xl text-[#030712]">
+                Best offers for you
+            </h1>
+            <div class="flex flex-col lg:flex-row gap-6">
+
+                <!-- offer1 -->
+                <div class="flex flex-1 bg-[#FFBF0F] rounded-3xl items-center">
+                    <div class="flex-1 space-y-2 pl-4">
+                        <h1 class="text-2xl lg:text-[40px] font-black text-[#030712CC]">
+                            15% OFF
+                        </h1>
+                        <h4 class="lg:text-[20px] text-[12px] text-[#030712CC] font-black">
+                            on your next purchase
+                        </h4>
+                        <p class="text-[14px] lg:text-[18px] text-[#03071280] font-semibold">
+                            use by January 2024
+                        </p>
+                    </div>
+                    <img src="./images/cupon-devider.png" alt="">
+                    <div class="p-2 space-y-2 lg:p-10">
+                        <h1 class="text-[#030712] font-bold font-relway text-xl lg:text-4xl">
+                            NEW15
+                        </h1>
+                        <p class="text-[#03071266] font-medium text-[20px]">
+                            Coupon Code
+                        </p>
+                    </div>
+                </div>
+                <!-- offer2 -->
+                <div class="flex flex-1 items-center bg-[#F78C9C] rounded-3xl">
+                    <div class="flex-1 space-y-2 pl-4">
+                        <h1 class="text-2xl lg:text-[40px] font-black text-[#030712CC]">
+                            20% OFF
+                        </h1>
+                        <h4 class="lg:text-[20px] text-[12px] text-[#030712CC] font-black">
+                            on your next purchase
+                        </h4>
+                        <p class="text-[14px] lg:text-[18px] text-[#03071280] font-semibold">
+                            use by January 2024
+                        </p>
+                    </div>
+                    <img src="./images/cupon-devider.png" alt="">
+                    <div class="p-2 space-y-2 lg:p-10">
+                        <h1 class="text-[#030712] font-bold font-relway lg:text-4xl text-xl">
+                            Couple 20
+                        </h1>
+                        <p class="text-[#03071266] font-medium text-[20px]">
+                            Coupon Code
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <button class="text-[#1DD100] font-bold text-[20px] border border-[#1DD100] font-relway px-8 py-5 rounded-xl hover:bg-green-200 duration-500">
+                See All Offers
+            </button>
         </section>
 
     </main>
