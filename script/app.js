@@ -162,5 +162,10 @@ function applyBonus() {
 
 function modalPge() {
     document.getElementById('modal-page').classList.remove('hidden');
-    document.getElementById('modal-page').classList.add('static');
+    document.getElementById('main-container').classList.add('hidden');
+}
+
+function goToMainPageAgain() {
+    document.getElementById('modal-page').classList.add('hidden');
+    document.getElementById('main-container').classList.remove('hidden');
 }
