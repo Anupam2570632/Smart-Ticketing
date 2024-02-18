@@ -22,6 +22,12 @@
         .font-inter {
             font-family: "Inter", sans-serif;
         }
+
+        #ticket-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     </style>
 </head>
 
@@ -72,7 +78,7 @@
 
 
                 <a class="bg-[#1DD100] lg:px-7 lg:py-4 rounded-md lg:rounded-xl text-black font-bold text-[12px] lg:text-[16px] py-3 px-3"
-                href="#buy-ticket">Buy Tickets</a>
+                    href="#buy-ticket">Buy Tickets</a>
             </div>
 
         </section>
@@ -182,7 +188,7 @@
                 <h1 class="text-2xl font-bold text-[#030712] lg:text-[40px] font-raleway">
                     P.H Paribahan
                 </h1>
-                <p class="text-[rgba(3, 7, 18, 0.60)] text-[18px] font-inter max-w-[730px] mx-auto">
+                <p class="text-[#03071299] text-[18px] font-inter max-w-[730px] mx-auto">
                     Yes, you can run unit tests and view the results directly within the app. The integrated testing
                     features allow for a streamlined .
                 </p>
@@ -307,130 +313,170 @@
                         </div>
                         <div class="flex gap-16">
                             <div class="grid grid-cols-2 gap-x-8 gap-y-6">
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    A1</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    A2</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    B1</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    B2</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    C1</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    C2</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    D1</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    D2</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    E1</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    E2</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    F1</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    F2</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    G1</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    G2</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    H1</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    H2</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    I1</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    I2</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    J1</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    J2</h1>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    A1</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    A2</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    B1</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    B2</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    C1</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    C2</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    D1</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    D2</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    E1</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    E2</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    F1</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    F2</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    G1</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    G2</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    H1</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    H2</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    I1</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    I2</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    J1</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    J2</button>
 
                             </div>
 
                             <div class="grid grid-cols-2 gap-x-8 gap-y-6">
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    A3</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    A4</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    B3</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    B4</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    C3</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    C4</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    D3</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    D4</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    E3</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    E4</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    F3</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    F4</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    G3</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    G4</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    H3</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    H4</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    I3</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    I4</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    J3</h1>
-                                <h1
-                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter">
-                                    J4</h1>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    A3</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    A4</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    B3</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    B4</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    C3</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    C4</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    D3</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    D4</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    E3</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    E4</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    F3</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    F4</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    G3</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    G4</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    H3</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    H4</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    I3</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    I4</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    J3</button>
+                                <button
+                                    class="px-14 py-5 bg-[#F7F8F8] text-[#03071280] rounded-xl flex items-center justify-center font-inter"
+                                    id="ticket">
+                                    J4</button>
                             </div>
                         </div>
                     </div>
@@ -447,11 +493,11 @@
                     <h1 class="text-[#030712] font-semibold text-2xl font-raleway">
                         Select Your Seat
                     </h1>
-                    <div class="space-y-6 bg-[#F7F8F8] p-8">
+                    <div class="space-y-6 bg-[#F7F8F8] p-8 rounded-xl">
                         <div class="flex justify-between">
-                            <div class="flex items-center">
+                            <div class="flex items-center gap-1">
                                 <p class="text-[#030712] font-medium font-inter">Seat</p> <span id="seat-count"
-                                    class="bg-[#1DD100] text-white px-2  text-[12px] font-bold">0</span>
+                                    class="bg-[#1DD100] rounded-2xl text-white px-2  text-[12px] font-bold">0</span>
                             </div>
                             <div class="text-[#030712] font-medium font-inter">
                                 Class
@@ -460,14 +506,16 @@
                                 Price
                             </div>
                         </div>
-                        <div class="border opacity-30 border-gray-400 border-dashed">
+                        <div class="space-y-4">
+                            <div class="border opacity-30 border-gray-400 border-dashed">
 
-                        </div>
-                        <ul>
+                            </div>
+                            <ul id="ticket-list" class="space-y-4">
 
-                        </ul>
-                        <div class="border opacity-30 border-gray-400">
+                            </ul>
+                            <div class="border opacity-30 border-gray-400">
 
+                            </div>
                         </div>
                         <div class="flex justify-between text-[#030712] font-medium font-inter items-center">
                             <h1>
@@ -479,10 +527,11 @@
                                 </span>
                             </h2>
                         </div>
-                        <div class="bg-white rounded-lg flex items-center gap-2 p-2">
-                            <input type="text" placeholder="Type here" class="input outline-none w-full border-none" />
-                            <span><button
-                                    class="px-5 py-3 rounded-lg bg-[#1DD100] font-semibold text-white font-inter">Apply</button></span>
+                        <div class="bg-white rounded-lg flex flex-row items-center gap-2 p-2">
+                            <input id="coupon-field" disabled type="text" placeholder="Type here"
+                                class="input outline-none w-full border-none" />
+                            <span><button disabled id="apply-button"
+                                    class="px-5 py-3 rounded-lg bg-[#1DD100] opacity-55 font-semibold text-white font-inter">Apply</button></span>
                         </div>
                         <div class="flex justify-between text-[#030712] font-medium font-inter items-center">
                             <h1>Grand Total</h1>
@@ -502,7 +551,7 @@
                     <span class="label-text text-black font-semibold font-inter">Email ID</span>
 
                     <input type="email" placeholder="Type here" class="input p-6 input-bordered w-full" />
-                    <button class="bg-[#1DD100] rounded-2xl w-full text-white font-extrabold py-4 text-[20px]">
+                    <button disabled class="bg-[#1DD100] rounded-2xl opacity-50 w-full text-white font-extrabold py-4 text-[20px]">
                         Next
                     </button>
                     <div class="flex underline justify-around text-[#03071299] font-inter">
