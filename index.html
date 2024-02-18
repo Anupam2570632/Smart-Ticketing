@@ -27,11 +27,12 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            color: #03071299;
         }
     </style>
 </head>
 
-<body>
+<body class="relative">
 
     <header class="lg:w-4/5 w-11/12 mx-auto lg:my-10 my-4">
 
@@ -164,7 +165,7 @@
                         </p>
                     </div>
                     <img src="./images/cupon-devider.png" alt="">
-                    <div class="p-2 space-y-2 lg:p-10">
+                    <div class="p-2 space-y-2 lg:p-7">
                         <h1 class="text-[#030712] font-bold font-relway lg:text-4xl text-xl">
                             Couple 20
                         </h1>
@@ -517,6 +518,7 @@
 
                             </div>
                         </div>
+
                         <div class="flex justify-between text-[#030712] font-medium font-inter items-center">
                             <h1>
                                 Total Price
@@ -527,10 +529,14 @@
                                 </span>
                             </h2>
                         </div>
-                        <div class="bg-white rounded-lg flex flex-row items-center gap-2 p-2">
-                            <input id="coupon-field" disabled type="text" placeholder="Type here"
+                        <div id="bonus-panel"
+                            class="flex justify-between flex-row text-[#030712] font-medium font-inter items-center">
+
+                        </div>
+                        <div id="coupon-div" class="bg-white rounded-lg flex flex-row items-center gap-2 p-2">
+                            <input autocomplete="off" id="coupon-field" disabled type="text" placeholder="Type here"
                                 class="input outline-none w-full border-none" />
-                            <span><button disabled id="apply-button"
+                            <span><button onclick="applyBonus()" disabled id="apply-button"
                                     class="px-5 py-3 rounded-lg bg-[#1DD100] opacity-55 font-semibold text-white font-inter">Apply</button></span>
                         </div>
                         <div class="flex justify-between text-[#030712] font-medium font-inter items-center">
@@ -541,17 +547,20 @@
                         </div>
 
 
+
                     </div>
                     <span class="label-text text-black font-semibold font-inter">Passenger Name*</span>
 
                     <input type="text" placeholder="Type here" class="input p-6 input-bordered w-full " />
                     <span class="label-text text-black font-semibold font-inter">Phone Number*</span>
 
-                    <input type="tel" placeholder="Type here" class="input p-6 input-bordered w-full" />
+                    <input type="number" id="phone-number" placeholder="Type here"
+                        class="input p-6 input-bordered w-full" />
                     <span class="label-text text-black font-semibold font-inter">Email ID</span>
 
                     <input type="email" placeholder="Type here" class="input p-6 input-bordered w-full" />
-                    <button disabled class="bg-[#1DD100] rounded-2xl opacity-50 w-full text-white font-extrabold py-4 text-[20px]">
+                    <button disabled onclick="modalPge()" id="next-button"
+                        class="bg-[#1DD100] rounded-2xl opacity-50 w-full text-white font-extrabold py-4 text-[20px]">
                         Next
                     </button>
                     <div class="flex underline justify-around text-[#03071299] font-inter">
@@ -563,7 +572,28 @@
             </section>
         </section>
 
+
+
+
+
     </main>
+
+    <!-- modal section -->
+    <section id="modal-page" class="w-[100vw] bg-white bg-opacity-50 h-[100vh] flex items-center justify-center hidden">
+        <div class="w-400px h-[400px] mx-auto">
+            <img src="./images/success.png" alt="">
+            <h1>
+                SUCCESS
+            </h1>
+            <p>
+                Thank you for Booking Our Bus Seats.
+                We are working hard to find the best service and deals for you.
+                <span> Shortly you will find a confirmation in your email.
+                </span>
+            </p>
+            <button>Continue</button>
+        </div>
+    </section>
 
     <footer class="bg-[#030712] font-raleway">
         <div class="w-11/12 lg:w-4/5 mx-auto text-white space-y-6 py-[120px]">
