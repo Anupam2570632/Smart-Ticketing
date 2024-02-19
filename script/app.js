@@ -126,6 +126,7 @@ function applyBonus() {
         document.getElementById('bonus-panel').appendChild(priceName);
         document.getElementById('bonus-panel').appendChild(dPrice);
         document.getElementById('bonus-panel').classList.remove('hidden');
+        document.getElementById('bonus-panel').classList.add('flex');
 
 
         document.getElementById('coupon-div').classList.add('hidden');
@@ -149,6 +150,7 @@ function applyBonus() {
         document.getElementById('bonus-panel').appendChild(priceName);
         document.getElementById('bonus-panel').appendChild(dPrice);
         document.getElementById('bonus-panel').classList.remove('hidden');
+        document.getElementById('bonus-panel').classList.add('flex');
 
 
 
@@ -157,7 +159,7 @@ function applyBonus() {
     }
 
     else {
-        alert('please enter the valid coupon')
+        alert('please enter a valid coupon')
     }
 }
 
@@ -166,11 +168,13 @@ function applyBonus() {
 
 function modalPge() {
     document.getElementById('modal-page').classList.remove('hidden');
+    document.getElementById('modal-page').classList.add('flex');
     document.getElementById('main-container').classList.add('hidden');
 }
 
 function goToMainPageAgain() {
     document.getElementById('modal-page').classList.add('hidden');
+    document.getElementById('modal-page').classList.remove('flex');
     document.getElementById('main-container').classList.remove('hidden');
     location.reload();
 }
