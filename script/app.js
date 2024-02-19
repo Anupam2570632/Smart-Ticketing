@@ -8,6 +8,7 @@ for (const ticket of allTicket) {
         btnClick.push(ticketCount);
 
         if (ticketCount > 4) {
+            alert('You can not buy more than 4 ticket');
             return 0;
         }
 
@@ -124,6 +125,7 @@ function applyBonus() {
 
         document.getElementById('bonus-panel').appendChild(priceName);
         document.getElementById('bonus-panel').appendChild(dPrice);
+        document.getElementById('bonus-panel').classList.remove('hidden');
 
 
         document.getElementById('coupon-div').classList.add('hidden');
@@ -146,6 +148,8 @@ function applyBonus() {
 
         document.getElementById('bonus-panel').appendChild(priceName);
         document.getElementById('bonus-panel').appendChild(dPrice);
+        document.getElementById('bonus-panel').classList.remove('hidden');
+
 
 
         document.getElementById('coupon-div').classList.add('hidden');
