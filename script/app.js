@@ -168,4 +168,5 @@ function modalPge() {
 function goToMainPageAgain() {
     document.getElementById('modal-page').classList.add('hidden');
     document.getElementById('main-container').classList.remove('hidden');
+    location.reload();
 }
